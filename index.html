@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/styles.css">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="overlay-menu-mobile"></div>
+   <header>
+     <div class="icon-logo-mobile-container">
+       <img class="icon-hamburguer-mobile" src="/images/icon-menu.svg" alt="menu-hamburg">
+       <img class="logo-mobile" src="/images/logo.svg" alt="">
+     </div>
+     
+      <menu class="menu">
+        
+        <li><img class="close-menu" src="/images/icon-close.svg" alt=""></li>
+        <li><img src="/images/logo.svg" alt="logo"></li>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </menu>
+      <div class="cart-profile-container">
+         <div class="cantidad-productos display-none"></div>
+         <img class="svg-cart" src="/images/icon-cart.svg" alt="Cart">
+         <div class="profile-circle"><img src="/images/image-avatar.png" alt=""></div>
+      </div>
+      <div class="modal-cart display-none" >
+        <p>Cart</p>
+        <div class="text-empty-container">
+          <p class="empty">Your cart is empty.</p>
+          <div class="cart-details display-none">
+            <div class="img-thumbnail-container">
+              <img src="/images/image-product-1-thumbnail.jpg" alt="">
+            </div>
+            <div class="text-container"> 
+              <!--
+               <span>$125.00 x 3 <strong>$375.00</strong></span> 
+              -->
+              <p>Fall Limited Edition Sneakers</p>
+            </div>
+            <img class="delete-icon" src="/images/icon-delete.svg" alt="delete-icon">
+           
+          </div>
+          <button class="btn-check display-none">Checkout</button>
+        </div>
+      </div>
+   </header>
+
+  <main class="main">
+    <div class="lightbox-container">
+      <div class="img-active-container">
+        <div class="img-active">
+          <img class="main-img" src="/images/image-product-1.jpg" alt="">
+        </div>
+        <div class="prev-next-container">
+          <div class="previous" alt="icon-previous"><svg class="svg-prev" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></div>
+          <div class="next" alt="icon-next"><svg class="svg-next" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></div>
+        </div>
+     
+      </div>
+      <div class="img-passive-container">
+        <div class="pasive-img"><img class="allimg img-1 active-img" id="1" src="/images/image-product-1-thumbnail.jpg" alt=""></div>
+        <div class="pasive-img"><img class="allimg img-2 " id="2" src="/images/image-product-2-thumbnail.jpg" alt=""></div>
+        <div class="pasive-img"><img class="allimg img-3 " id="3" src="/images/image-product-3-thumbnail.jpg" alt=""></div>
+        <div class="pasive-img"><img class="allimg img-4 " id="4" src="/images/image-product-4-thumbnail.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="textAndButtonContainer">
+      <span>SNEAKER COMPANY</span>
+      <h1>Fall Limited Edition Sneakers</h1>
+      <p>  
+        These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <div class="precios">
+        <div class="precio-principal"><p>$125.00</p></div>
+        <div class="descuento"><span>50%</span></div>
+        <div class="precio-anterior"><del>$250.00</del></div>
+      </div>
+      <div class="buttons-container">
+        <div class="increment-decrement">
+          <div class="decrement">-</div>
+          <div class="number"></div>
+          <div class="increment">+</div>
+        </div>
+        <button class="add-to-cart">
+          <img class="cart" src="/images/icon-cart.svg" alt="cart">
+          <p class="add-to-cart">Add to cart</p>
+        </button>
+      </div>
+    </div>
+  </main>
+
+   <dialog class="modal" id="modal">
+      <div class="cruz-container">
+        <div class="cr">
+          <svg class="cruz" width="16" height="15" xmlns="http://www.w3.org/2000/svg"><path class="path" d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#ffff" fill-rule="evenodd"/></svg>
+        </div>
+      </div>
+      <div class="lightbox-container">
+        <div class="img-active-container">
+          <div class="img-active" id="id-img-active">
+            <img class="main-img" id="img-active-id" src="/images/image-product-1.jpg" alt="">
+          </div>
+          <div class="prev-next-container" id="prev-nex-id">
+            <div class="previous" id="prev" alt="icon-previous"><svg class="svg-prev" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></div>
+            <div class="next" id="next" alt="icon-next"><svg class="svg-next" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></div>
+          </div>
+          
+        </div>
+        <div class="img-passive-container" id="id-dialog">
+          <div class="pasive-img">
+            <img class="allimg jj img-1 active-img" id="1" src="/images/image-product-1-thumbnail.jpg" alt="">
+          </div>
+          <div class="pasive-img">
+            <img class="allimg jj img-2 " id="2" src="/images/image-product-2-thumbnail.jpg" alt="">
+          </div>
+          <div class="pasive-img">
+            <img class="allimg jj img-3 " id="3" src="/images/image-product-3-thumbnail.jpg" alt="">
+          </div>
+          <div class="pasive-img">
+            <img class="allimg jj img-4 " id="4" src="/images/image-product-4-thumbnail.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </dialog> 
+ 
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+<script src="js/app.js" type="module"></script>
+</html>

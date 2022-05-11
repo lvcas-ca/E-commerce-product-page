@@ -118,8 +118,8 @@ for (let i = 0; i < allImg.length; i++) {
        let id = allImg[i].id;
        allImg[i].addEventListener("click", e =>{
             
-            mainImg.src = allImg[i].src = `/images/image-product-${id}.jpg`;
-            mainImgModal.src = allImg[i].src = `/images/image-product-${id}.jpg`;
+            mainImg.src = allImg[i].src = `images/image-product-${id}.jpg`;
+            mainImgModal.src = allImg[i].src = `images/image-product-${id}.jpg`;
             counter = id;
            
             for (let j = 0; j < allImg.length; j++) {

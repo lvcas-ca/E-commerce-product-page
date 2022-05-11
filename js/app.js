@@ -139,8 +139,8 @@ next.forEach(AllNext =>{
               miniImgModal[counter-1].classList.remove("active-img");
               counter++;
         }
-        mainImg.src = `/images/image-product-${counter}.jpg`;
-        mainImgModal.src = `/images/image-product-${counter}.jpg`;  
+        mainImg.src = `images/image-product-${counter}.jpg`;
+        mainImgModal.src = `images/image-product-${counter}.jpg`;  
     }); 
 })
 
@@ -156,8 +156,8 @@ previous.forEach(AllPrev =>{
         }else if(counter===0){
             counter++; 
         }
-        mainImg.src = `/images/image-product-${counter}.jpg`;
-        mainImgModal.src = `/images/image-product-${counter}.jpg`; 
+        mainImg.src = `images/image-product-${counter}.jpg`;
+        mainImgModal.src = `images/image-product-${counter}.jpg`; 
     });
 })
  
